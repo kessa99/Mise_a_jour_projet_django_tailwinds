@@ -1,0 +1,153 @@
+{% extends 'dossier_principale/base.html' %}
+
+{% block title %}accueil{% endblock %}
+
+{% block content %}
+<div class="mt-mept mr-mepd ml-mepg mb-mepb">
+    <section>
+        <div class="flex h-1/2 justify-center items-center text-center  font-extrabold uppercase text-5xl pt-pt100 bg-back  bg-no-repeat bg-center ">
+            <div class=" pt-20 relative">
+                <img src="../static/img/man.png" alt="">
+                <img src="../static/img/elements.png" class="absolute left-0 top-0">
+            </div> 
+            <div class="hidden md:inline-block">
+                <p>
+                    Bienvenue sur  TaxIQ <br>
+                    Votre Solution Fiscale Intelligente
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="text-3xl font-semibold text-gray-800  py-8">
+            Pourquoi choisir <br>  Tax<span class="text-lime-500">IQ </span>
+        </h1>
+        <div class="lg:grid grid-cols-3 gap-4 md:grid grid-cols-1 gap-4">
+            <div class="text-justify col-span-2 bg-red-200 py-8 bg-[url('../static/img/why2.svg')]  bg-no-repeat bg-center rounded-lg">
+                <h1 class="text-center"><span class="text-lime-500">Calcul Précis d'Impôts </span> <br> TaxIQ effectue des calculs fiscaux précis en fonction de votre <br> 
+                    situation financière, en prenant en compte les dernières réglementations fiscales</h1>
+            </div>
+            <div class="bg-orange-100 rounded-lg bg-[url('../static/img/why2.svg')]  bg-no-repeat bg-center text-justify py-8 ">
+                <h1 class="text-center">
+                    <span class="text-lime-500">Guides et Conseils  </span> <br> Accédez à des guides fiscaux complets et à des conseils personnalisés pour optimiser vos déclarations fiscales et maximiser vos économies
+                </h1>
+            </div>
+            <div class=" rounded-lg bg-amber-100 bg-[url('../static/img/calendarnew.svg')]  bg-no-repeat bg-center py-8 " >
+                <h1 class="text-center"> <span class="text-lime-500" >Calendrier Fiscal:</span> <br> Recevez des rappels de dates limites pour ne jamais manquer une échéance fiscale importante.</h1>
+            </div>
+            <div class="rounded-lg col-span-2 bg-lime-800 bg-[url('../static/img/guide.svg')]  bg-no-repeat bg-center py-8 ">
+                <h1 class="text-center">
+                    <span class="text-lime-500">Guides et Conseils : </span> <br> Accédez à des guides fiscaux complets et à des conseils personnalisés pour optimiser vos déclarations fiscales et maximiser vos économies.</h1>
+            </div>
+          </div>
+    </section>
+    
+    <section>
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6 py-8">
+            F<span class="text-lime-500 py-8">o</span>rum
+        </h1>
+        <div class="bg-slate-300 flex h-1/2 justify-center items-center text-center">
+            <div class="">
+                <img src="../static/img/bm.svg" class="hidden md:inline-block">
+            </div>
+            <div>
+               <span class=" font-extrabold uppercase">
+                Une communauté passionnée. 
+               </span> <br> 
+               Rencontrez des personnes partageant des informations et des conseils sur tous les aspects de la fiscalité.<br>
+            
+               <span class=" font-extrabold uppercase">
+                Réponses à vos questions.
+               </span> 
+               <br>  Obtenez des réponses à vos questions sur la déclaration de revenus, les déductions fiscales, les changements de réglementation et plus encore.<br>
+                
+               <span class=" font-extrabold uppercase">
+                Expertise disponible.
+               </span> <br> 
+               Nos membres expérimentés et nos experts fiscaux sont là pour vous guider dans le monde complexe des impôts.<br> 
+                
+               <span class=" font-extrabold uppercase">
+                Partagez vos connaissances.
+               </span> <br>
+               Partagez vos expériences et astuces pour aider les autres membres.<br>
+                
+               <a href="#" class="lg:rounded-full inline-flex items-center py-4 px-3 bg-slate-700 text-white rounded-lg text-sm font-medium hover:bg-lime-500">
+                Rejoignez-nous
+               </a>  
+            </div>
+            
+          </div>
+    </section>
+
+    <section>
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6  py-8">
+            Imp<span class="text-lime-500 py-8">o</span>t
+        </h1>
+        <div class="grid grid-cols-2 grid-rows-1 gap-4">
+            <div class="justify-center items-center text-center bg-slate-700 hover:bg-lime-500 cursor-pointer rounded-full">
+                <a href="#" class="lg:rounded-full inline-flex items-center py-4 px-3 text-white rounded-lg text-sm font-medium">
+                    Impot Sur Salaire
+                   </a> 
+            </div>
+            <div class=" justify-center items-center text-center bg-slate-700 hover:bg-lime-500 cursor-pointer rounded-full">
+                <a href="#" class="lg:rounded-full inline-flex items-center py-4 px-3 text-white rounded-lg text-sm font-medium ">
+                    Impôts des sociétés
+                </a> 
+            </div>
+           
+        </div>
+        <div class="justify-center items-center text-center">
+            <h2 class="text-3xl font-semibold text-gray-800  mt-6 mb-6 text-center">
+            Commencez par faire vos calculs d'impôts rapidement et efficacement
+            </h2>
+        </div>
+    </section>
+
+    <section class="justify-center items-center">
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center py-8">
+            Obtenez les meilleurs n<span class="text-lime-500 py-8">e</span>ws
+        </h1>
+        <div class="lg:flex">
+            <div class="justify-center items-center">
+                <div class="w-[640px] h-[400px] overflow-hidden max-w-taxmw my-100px mx-auto border-solid border-slate-950">
+                    <div class="flex animate-wiggle">
+                        <img src="../static/img/carouselle/1.png" alt="">
+                        <img src="../static/img/carouselle/2.png" alt="">
+                        <img src="../static/img/carouselle/3.png" alt="">
+                        <img src="../static/img/carouselle/4.png" alt="">
+                        <img src="../static/img/carouselle/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center py-4">
+                <span class="text-3xl font-semibold text-gray-800 mb-6 text-center py-8">
+                    Obtenez la meilleurs des news aussi rapidement qu'elle est sorti 24h/24 7jr/7
+                </span> <br>         
+                <a href="#" class="inline-flex items-center py-4 px-3 bg-slate-700 hover:bg-lime-500 cursor-pointer rounded-full">
+                    Rejoignez-nous
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex h-1/2 justify-center items-center text-center ">
+            <div class="justify-center items-center text-center ">
+                <h1 class="text-3xl font-semibold text-gray-800 mb-6 py-8">
+                    Restez <span class="text-lime-500 py-8">a</span> Jour
+                </h1>
+                <form class="justify-center items-center text-center ">
+                    <label for="email">Address email</label>
+                    <input type="email" id="email" placeholder="email@gmail.com" class="my-2 border-solid border-slate-950">
+                    <button type="submit" class="lg:rounded-full inline-flex items-center py-4 px-3 bg-slate-700 text-white rounded-lg text-sm font-medium hover:bg-lime-500"> Soubscrivez</button>
+                </form>
+            </div>
+            <div class="left">
+                <img src="../static/img/news.png" alt="" class="img-img">
+            </div>
+        </div>
+        
+    </section>
+</div>
+{% endblock %}

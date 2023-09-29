@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>{% block title %}TaxIQ{% endblock %}</title>
+    {% include 'css/css.html' %}
+</head>
+
+<body id="top" class="font-popins">
+    <header class="bg-white z-50 fixed top-0 w-full shadow">
+        <nav id="main-nav" class="bg-white max w-5xl mx-auto font-popins p-6 flex items-center justify-between">
+            <a href="top" aria-label="Page d'accueil du site">
+                <span class="text-lg lg:text-xl justify-center" aria-hidden="true">
+                    Tax <strong><span class="text-lime-500">IQ</span></strong>
+                </span>
+            </a>
+            
+            <button aria-label="toggle button" aria-expanded="false" id="menu-btn" class="cursor-pointer w-7 md:hidden text-xs">
+                <i class='bx bxs-objects-horizontal-right'></i>
+            </button>
+    
+            <ul id="toggle-menu" class=" absolute top-full left-0 -translate-y-full -z-10 text-gray-800 borde-b border-gray-200 flex flex-col items-center md:static md:z-10 md:w-win md:transform-none md:border-none md:flex-row">
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="{% url 'home' %}" class="text-sm  font-semibold w-full hover:text-lime-500">
+                        <div class="flex flex-col items-center">
+                            <i class='bx bxs-home'></i>
+                            <p>accueil</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="{% url 'service' %}" class="text-sm  font-semibold w-full hover:text-lime-500">
+                        <div class="flex flex-col items-center">
+                            <i class='bx bxs-dollar-circle'></i>
+                            <p>services</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="{% url 'information' %}" class="text-sm  font-semibold w-full hover:text-lime-500">
+                        <div class="flex flex-col items-center">
+                            <i class='bx bx-chat'></i>
+                            <p>Informations</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="{% url 'aide' %}" class="text-sm  font-semibold w-full hover:text-lime-500">
+                        <div class="flex flex-col items-center">
+                            <i class='bx bx-help-circle' ></i>                            
+                            <p>aide</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="{% url 'login' %}" class="text-sm  font-semibold w-full hover:text-lime-500">
+                        <div class="flex flex-col items-center">
+                            <i class='bx bx-horizontal-right'></i>
+                            <p>connexion</p>
+                        </div>
+                    </a>
+                </li>
+                 <li class="py-4 md:py-0 md:mr-6">
+                    <a href="{% url 'signup' %}" class="text-sm  font-semibold w-full hover:text-lime-500">Sign Up</a>
+                </li>
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="{% url 'dashboard' %}" class="text-sm  font-semibold w-full hover:text-lime-500">dashbord</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="flex flex-col bg-footer1 text-white">
+        <div class="grid grid-cols-5 gap-4">
+            <div class="">
+                <img src="../static/img/logonew.png" alt="" class="w-40px">
+            </div>
+            
+            <div class="bloc footer-service">
+                <h3 class="mb-4"> informations </h3>
+                <ul class="list-service">
+                    <li> <a href="" class="hover:text-lime-500">Comment ça marche</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Faq</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Qui sommes nous</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Services</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Forum</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Bog</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Aide</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="bloc footer-service">
+                <h3 class="mb-4"> Ressources fiscales  </h3>
+                <ul class="list-service">
+                    <li> <a href="" class="hover:text-lime-500">Bénin</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Burkina Faso</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Guinée-Bissau</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Mali</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Niger</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Sénégal</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Togo</a></li>
+                </ul>
+            </div>
+
+            <div class="bloc footer-service">
+                <h3 class="mb-4"> Articles de blog </h3>
+                <ul class="list-service">
+                    <li> <a href="" class="hover:text-lime-500">L’importance de la formalisation</a></li>
+                    <li> <a href="" class="hover:text-lime-500">L’origine de le la fiscalité</a></li>
+                    <li> <a href="" class="hover:text-lime-500">A quoi sert les impôts</a></li>
+                    <li> <a href="" class="hover:text-lime-500">C’est quoi le redressement fiscal</a></li>
+                </ul>
+            </div>
+
+            <div class="bloc footer-service">
+                <h3 class="mb-4"> Information Légale </h3>
+                <ul class="list-service mb-4">
+                    <li> <a href="" class="hover:text-lime-500">politique de confidentialité </a></li>
+                    <li> <a href="" class="hover:text-lime-500">Termes et conditions d’utilisations</a></li>
+                    <li> <a href="" class="hover:text-lime-500">Politique de sécurité </a></li>
+                    <li> <a href="" class="hover:text-lime-500">Facebook</a></li>
+                    <li> <a href="" class="hover:text-lime-500">LinkedIn </a></li>
+                    <li> <a href="" class="hover:text-lime-500">Twitter </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-footer2 text-center">
+            <p>copyright &copy;2023 TaxIQ.</p>
+        </div>
+    </footer>
+</body>
+</html>

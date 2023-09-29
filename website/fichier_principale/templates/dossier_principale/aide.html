@@ -1,0 +1,47 @@
+{% extends "dossier_principale/base.html" %}
+
+{% block content %}
+<div class="mt-mept mr-mepd ml-mepg mb-mepb flex justify-center items-center min-h-screen">
+    <!-- <div class="w-96 border border-solid border-gray-600 bg-transparent shadow-lg rounded-lg pt-7 pb-7 pr-10 pl-10">
+        <h1 class="text-3xl font-semibold text-gray-800 text-center py-8">
+            Vous avez de plus <br><span class="text-lime-500">d'aide</span>?
+        </h1>
+        <form>
+            <input class="w-96 mt-5 pl-2 w-full h-10 rounded-lg outline-none border border-solid border-gray-600 rounded-3xl text-base " type="text" placeholder="Nom complet" class="my-2 border-solid border-slate-950">
+            <input class="w-96 mt-5 pl-2 w-full h-10 rounded-lg outline-none border border-solid border-gray-600 rounded-3xl text-base " type="email" placeholder="Email" class="my-2 border-solid border-slate-950">
+            <textarea class="w-96 mt-5 pl-2 w-full h-40 rounded-lg outline-none border border-solid border-gray-600 rounded-3xl text-base  name="Message" placeholder="Entrez votre message s'il vous plait"></textarea>
+            <button type="submit" class="lg:rounded-full inline-flex items-center m-7 py-4 px-3 bg-slate-700 text-white rounded-lg text-sm font-medium hover:bg-lime-500"> Soubscrivez</button>
+        </form>
+    </div> -->
+    <div class="mt-mept mr-mepd ml-mepg mb-mepb  min-h-screen">
+
+        <div class="h-screen w-full  items-center justify-center ">
+
+            <form action="" class="max-w-430px bg-white w-full rounded-3xl p-7">
+
+                <h1 class="text-3xl font-semibold text-gray-800 text-center py-8">
+                    Vous avez de plus <br><span class="text-lime-500">d'aide</span>?
+                </h1>
+
+                <div class="w-full h-12 my-7 mx-0 ">
+                    <input class="w-full h-full rounded-lg outline-none border border-solid border-gray-600 rounded-3xl text-base font-normal py-0 px-4 border-b border-gray-400 focus:border-lime-500 focus:border-b-2" type="text" name="text" placeholder="Saisir Votre Nom">
+                </div>
+
+                <div class="w-full h-12 mt-7 mx-0 ">
+                    <textarea class="w-96 mt-5 pl-2 w-full h-40 rounded-lg outline-none border border-solid border-gray-600 rounded-3xl text-base " name="Message" placeholder="Entrez votre message s'il vous plait"></textarea>
+                </div>
+                
+                <div class="mt-8 justify-center items-center text-center bg-slate-700 hover:bg-lime-500 cursor-pointer rounded">
+                    <a href="#" class="lg:rounded inline-flex items-center py-4 px-3 text-white rounded-lg text-sm font-medium">
+                        Envoyez le message
+                    </a> 
+                </div>
+
+            </form>
+            
+            
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

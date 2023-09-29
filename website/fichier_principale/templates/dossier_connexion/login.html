@@ -1,0 +1,61 @@
+{% extends 'dossier_principale/base.html' %}
+{% block title %}Page De Connexion{% endblock %}
+{% block content %}
+    
+<div class="mt-mept mr-mepd ml-mepg mb-mepb  min-h-screen">
+
+        <div class="h-screen w-full flex items-center justify-center ">
+
+            <form action="" class="max-w-430px bg-white w-full rounded-3xl p-7">
+
+                <h1 class="text-3xl text-center mt-8">Connectez-vous</h1>
+
+                <div class="w-full h-12 my-7 mx-0 ">
+                    <input class="w-full h-full rounded-lg outline-none border border-solid border-gray-600 rounded-3xl text-base font-normal py-0 px-4 border-b border-gray-400 focus:border-lime-500 focus:border-b-2" type="text" name="text" placeholder="Email ou numéro de téléphone">
+                </div>
+
+                <div class="w-full h-12 mt-7 mx-0 ">
+                    <input class="w-full h-full rounded-lg outline-none border border-solid border-gray-600 rounded-3xl text-base font-normal py-0 px-4 border-b border-gray-400 focus:border-lime-500 focus:border-b-2" type="password", placeholder="Password">
+                </div>
+
+                <div class=" text-center align-center mt-3 hover:text-lime-500 cursor-pointer">
+                    <a href="#" class="">
+                        Mot de Passe Oublié ?
+                    </a> 
+                </div>
+
+                <div class="mt-6 justify-center items-center text-center bg-slate-700 hover:bg-lime-500 cursor-pointer rounded">
+                    <a href="#" class="lg:rounded inline-flex items-center py-4 px-3 text-white rounded-lg text-sm font-medium">
+                        Connexion
+                    </a> 
+                </div>
+
+                <div class="mt-2 text-center">
+                    <span>
+                        Avez-vous un compte? 
+                        <a href="{% url 'signup' %}" class="hover:text-lime-500"> 
+                            Creer un compte
+                        </a> 
+                    </span>
+                </div>
+                <div class="relative h-px w-full bg-lime-950 mt-4"> 
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-gray-700 py-0 px-4">Or</div>
+                </div>
+
+                <div class="mt-4 justify-center items-center text-center bg-slate-700 hover:bg-lime-500 cursor-pointer rounded">
+                    <a href="#" class="lg:rounded-full inline-flex items-center py-4 px-3 text-white rounded-lg text-sm font-medium">
+                        <i class='bx bxl-google'></i>
+                        <span>Connectez-vous avec Google</span>
+                    </a> 
+                </div>
+                <div class="mt-4 justify-center items-center text-center bg-slate-700 hover:bg-lime-500 cursor-pointer rounded">
+                    <a href="#" class="lg:rounded-full inline-flex items-center py-4 px-3 text-white rounded-lg text-sm font-medium">
+                        <i class='bx bx-phone'></i>
+                        <span>Connectez-vous un numéro de Téléphone</span>
+                    </a> 
+                </div>
+            </form>
+            
+        </div>
+</div>
+{% endblock %}

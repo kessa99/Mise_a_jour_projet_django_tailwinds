@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>{% block head_title %}{% endblock %}</title>
+    {% include 'modif/css.html' %}
+</head>
+<body class="text-gray-800 font-inter">
+    
+    <!-- start: Sidebar -->
+    <div class="fixed left-0 w-64 h-full bg-black p-4 ">
+        <a href="#" class="flex items-center pb-4 border-b border-b-gray-800">
+            <span class="text-lg lg:text-xl justify-center" aria-hidden="true">
+                Tax <strong><span class="text-lime-500">IQ</span></strong>
+            </span>
+        </a>
+        <ul class="mt-4">
+            <li>
+                <a href="{% url 'home' %}" class="flex items-center py-2 px-4 text-gray-300 hover:bg-lime-500">
+                    
+                    <span class="ml-2 text-sm"></span>
+                    <strong><span class="text-lime-500">IQ</span></strong>
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'home' %}" class="flex items-center py-2 px-4 text-gray-300 hover:bg-lime-500">
+                    <i class='bx bxs-home-heart'></i>
+                    <span class="ml-2 text-sm">Accueil</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'impots' %}" class="flex items-center py-2 px-4 text-gray-300 hover:bg-lime-500">
+                    <i class='bx bx-money'></i>
+                    <span class="ml-2 text-sm">Impôts</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-lime-500">
+                    <i class='bx bx-user' ></i>
+                    <span class="ml-2 text-sm">Personnel</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-lime-500">
+                    <i class='bx bx-user' ></i>
+                    <span class="ml-2 text-sm">Compte</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-lime-500">
+                    <i class='bx bx-cog' ></i>
+                    <span class="ml-2 text-sm">Paramètre</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-lime-500">
+                    <i class='bx bx-power-off' ></i>
+                    <span class="ml-2 text-sm">Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
+    <!-- end: Sidebar -->
+
+    <!-- start: Main -->
+    <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 min-h-screen transition-all main">
+        {% block content %}{% endblock %}
+    </main>
+    <!-- end: Main -->
+
+
+    <script src="{ assets 'dashbord.js' }"></script>
+</body>

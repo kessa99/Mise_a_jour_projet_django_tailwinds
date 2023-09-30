@@ -10,8 +10,8 @@ urlpatterns = [
 
 
     path('impot', views.impot, name='impot'),
-
-
+    
+    
     path('login', views.login, name='login'),
-    path('signup', views.signup, name='signup'),
+    path('signup1', views.signup1, name='signup1'),
 ]

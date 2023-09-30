@@ -1,5 +1,5 @@
 {% extends 'dossier_principale/base.html' %}
-{% block title %}Page De Connexion{% endblock %}
+{% block title %}connexion{% endblock %}
 {% block content %}
     
 <div class="mt-mept mr-mepd ml-mepg mb-mepb  min-h-screen">
@@ -7,7 +7,7 @@
         <div class="h-screen w-full flex items-center justify-center ">
 
             <form action="" class="max-w-430px bg-white w-full rounded-3xl p-7">
-
+                {% csrf_token %}
                 <h1 class="text-3xl text-center mt-8">Connectez-vous</h1>
 
                 <div class="w-full h-12 my-7 mx-0 ">
@@ -33,7 +33,7 @@
                 <div class="mt-2 text-center">
                     <span>
                         Avez-vous un compte? 
-                        <a href="{% url 'signup' %}" class="hover:text-lime-500"> 
+                        <a href="{% url 'signup1' %}" class="hover:text-lime-500"> 
                             Creer un compte
                         </a> 
                     </span>

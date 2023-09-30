@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <title>{% block head_title %}{% endblock %}</title>
-    {% include 'modif/css.html' %}
+    {% include 'css/css.html' %}
 </head>
 <body class="text-gray-800 font-inter">
     
@@ -36,7 +36,7 @@
                 </a>
             </li>
             <li>
-                <a href="{% url 'impots' %}" class="flex items-center py-2 px-4 text-gray-300 hover:bg-lime-500">
+                <a href="{% url 'impot' %}" class="flex items-center py-2 px-4 text-gray-300 hover:bg-lime-500">
                     <i class='bx bx-money'></i>
                     <span class="ml-2 text-sm">Impôts</span>
                 </a>

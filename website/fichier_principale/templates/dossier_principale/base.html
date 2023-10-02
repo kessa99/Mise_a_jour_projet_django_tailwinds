@@ -24,7 +24,7 @@
             <button aria-label="toggle button" aria-expanded="false" id="menu-btn" class="cursor-pointer w-7 md:hidden text-xs">
                 <i class='bx bxs-objects-horizontal-right'></i>
             </button>
-            
+           
             <ul id="toggle-menu" class=" absolute top-full left-0 -translate-y-full -z-10 text-gray-800 borde-b border-gray-200 flex flex-col items-center md:static md:z-10 md:w-win md:transform-none md:border-none md:flex-row">
                 <li class="py-4 md:py-0 md:mr-6">
                     <a href="{% url 'home' %}" class="text-sm  font-semibold w-full hover:text-lime-500">
@@ -58,6 +58,18 @@
                         </div>
                     </a>
                 </li>
+                {% if user.is_authenticated %}
+
+                 <li class="py-4 md:py-0 md:mr-6">
+                    <a href="{% url 'login' %}" class="text-sm  font-semibold w-full hover:text-lime-500">
+                        <div class="flex flex-col items-center">
+                            <i class='bx bx-power-off' ></i>
+                            <p>deconnection </p>
+                        </div>
+                    </a>
+                </li>
+                {% else %}
+
                 <li class="py-4 md:py-0 md:mr-6">
                     <a href="{% url 'login' %}" class="text-sm  font-semibold w-full hover:text-lime-500">
                         <div class="flex flex-col items-center">
@@ -66,21 +78,14 @@
                         </div>
                     </a>
                 </li>
-                
-                <!-- <li class="py-4 md:py-0 md:mr-6">
+                {% endif %}
+                 <li class="py-4 md:py-0 md:mr-6">
                     <a href="{% url 'signup1' %}" class="text-sm  font-semibold w-full hover:text-lime-500">Sign Up</a>
-                </li> -->
-                <!-- <li class="py-4 md:py-0 md:mr-6">
+                </li>
+                <li class="py-4 md:py-0 md:mr-6">
                     <a href="{% url 'dashboard' %}" class="text-sm  font-semibold w-full hover:text-lime-500">dashbord</a>
-                </li> -->
-                <!-- <li class="py-4 md:py-0 md:mr-6">
-                    <a href="{% url 'login' %}" class="text-sm  font-semibold w-full hover:text-lime-500">
-                        <div class="flex flex-col items-center">
-                            <i class='bx bx-power-off' ></i>
-                            <p>deconnection </p>
-                        </div>
-                    </a>
-                </li> -->
+                </li>
+               
             </ul>
         </nav>
     </header>

@@ -6,12 +6,12 @@
 
         <div class="h-screen w-full flex items-center justify-center ">
 
-            <form action="" class="max-w-430px bg-white w-full rounded-3xl p-7">
+            <form action="{% url 'login' %}" method="POST" class="max-w-430px bg-white w-full rounded-3xl p-7">
                 {% csrf_token %}
                 <h1 class="text-3xl text-center mt-8">Connectez-vous</h1>
 
                 <div class="w-full h-12 my-7 mx-0 ">
-                    <input class="w-full h-full rounded-lg outline-none border border-solid border-gray-600 rounded-3xl text-base font-normal py-0 px-4 border-b border-gray-400 focus:border-lime-500 focus:border-b-2" type="text" name="text" placeholder="Email ou numéro de téléphone">
+                    <input class="w-full h-full rounded-lg outline-none border border-solid border-gray-600 rounded-3xl text-base font-normal py-0 px-4 border-b border-gray-400 focus:border-lime-500 focus:border-b-2" type="email" name="email" placeholder="Email ou numéro de téléphone">
                 </div>
 
                 <div class="w-full h-12 mt-7 mx-0 ">
